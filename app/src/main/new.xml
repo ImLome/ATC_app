@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center" android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Panel del Conductor" android:textSize="24sp" android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <Button android:id="@+id/btn_gestionar_pedido" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Gestionar Pedido"
+        android:layout_marginBottom="8dp" />
+
+    <Button android:id="@+id/btn_ver_mapa" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Ver Mapa y Progreso"
+        android:layout_marginBottom="8dp" />
+
+    <Button android:id="@+id/btn_firmar_comprobante" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Firmar Comprobante"
+        android:layout_marginBottom="8dp" />
+
+    <Button android:id="@+id/btn_reportar_novedad" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Reportar Novedad"
+        android:layout_marginBottom="8dp" />
+
+    <Button android:id="@+id/btn_chat_cliente" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Chat con Cliente" />
+
+</LinearLayout>
