@@ -15,9 +15,25 @@ class OrderFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentOrderBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnStartTrip.setOnClickListener {
+            binding.deliveryStatus.text = "En Ruta"
+        }
+
+        binding.btnArriveDestination.setOnClickListener {
+            binding.deliveryStatus.text = "En Destino"
+        }
+
+        binding.btnCompleteDelivery.setOnClickListener {
+            binding.deliveryStatus.text = "Entrega Finalizada"
+        }
     }
 
     override fun onDestroyView() {

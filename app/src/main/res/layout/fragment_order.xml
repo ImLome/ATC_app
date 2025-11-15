@@ -1,47 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".OrderFragment">
 
     <TextView
+        android:id="@+id/order_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detalles del Pedido"
         android:textSize="24sp"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/order_id"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/order_details_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pedido ID: #12345"
-        android:textSize="18sp"/>
+        android:layout_below="@+id/order_title"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/customer_name"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedido ID: #12345"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente: Juan Pérez"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/delivery_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección: Calle Falsa 123"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/delivery_status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Estado del Pedido:"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/delivery_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pendiente"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/status_buttons_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cliente: Juan Pérez"
-        android:textSize="18sp"/>
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
 
-    <TextView
-        android:id="@+id/delivery_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dirección: Calle Falsa 123"
-        android:textSize="18sp"/>
+        <Button
+            android:id="@+id/btn_start_trip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Viaje"/>
 
-    <TextView
-        android:id="@+id/delivery_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Estado: En Camino"
-        android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/btn_arrive_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Llegar al Destino"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_complete_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finalizar Entrega"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
