@@ -1,48 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".SignatureFragment">
 
     <TextView
-        android:id="@+id/signature_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Firma del Cliente"
         android:textSize="24sp"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"/>
 
-    <com.example.atc_app.SignatureView
-        android:id="@+id/signature_view"
+    <View
+        android:id="@+id/signature_pad"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/signature_title"
-        android:layout_above="@+id/buttons_layout"
-        android:background="#EEEEEE" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray" />
 
-    <LinearLayout
-        android:id="@+id/buttons_layout"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/save_signature_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:gravity="center">
+        android:text="Guardar Firma"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
 
-        <Button
-            android:id="@+id/clear_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Limpiar"
-            android:layout_marginEnd="16dp"/>
-
-        <Button
-            android:id="@+id/save_signature_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Guardar Firma"/>
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
